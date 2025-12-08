@@ -1,5 +1,5 @@
-@import 'base/variables.css';
 @import 'base/reset.css';
+@import 'base/variables.css';
 @import 'utils/spacing.css';
 @import 'utils/flex.css';
 @import 'utils/typography.css';

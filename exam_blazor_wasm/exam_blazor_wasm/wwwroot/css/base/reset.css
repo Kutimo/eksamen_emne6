@@ -44,11 +44,16 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
+    content: '';
 }
 
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
