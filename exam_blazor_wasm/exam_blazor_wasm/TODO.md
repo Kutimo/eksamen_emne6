@@ -49,6 +49,7 @@ Annet:
 - [ ] favicon
 - [ ] fix ugly errors
 - [] make css lib with reusable code
+- [] accesibility checks
 - 
 ---
 
