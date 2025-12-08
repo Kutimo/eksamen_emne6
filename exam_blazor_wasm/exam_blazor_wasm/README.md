@@ -5,8 +5,10 @@
 
 ### Sources
 
-typography page:   
-[syntax.fm](https://syntax.fm/system/typography)
+typography page:     
+[syntax.fm](https://syntax.fm/system/typography)  
+CSS classes inspiration:  
+[tailwind](https://tailwindcss.com/docs/installation/using-vite)
 
 ### Ai use:
 

@@ -21,6 +21,7 @@
 
 **2. Detaljvisning**
 - [ ] Implementer klikk-handling på bruker i lista
+- [] make modal for this
 - [ ] Vis detaljside med:
     - [ ] Større bilde (medium/large)
     - [ ] Fullt navn
@@ -31,6 +32,7 @@
     - [ ] Telefonnummer
 
 **3. Filtrering/søk (minst én)**
+Make a search bar
 - [ ] Filtrering på kjønn (male/female/alle)
 - [ ] Filtrering på land
 - [ ] Søk etter navn
@@ -48,7 +50,7 @@
 Annet: 
 - [ ] favicon
 - [ ] fix ugly errors
-- [] make css lib with reusable code
+- [] make CSS lib with reusable code
 - [] accesibility checks
 - 
 ---
