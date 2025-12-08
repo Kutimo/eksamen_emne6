@@ -3,16 +3,32 @@ body {
     /* https://grabient.com/HQBgrAzANKAsAcMT0cAjLAnDNYDsOsATDEUSKWicGWlBMHmtA3kS8AGybShgVpQIAUIoggA?style=linearSwatches */
 
     background: linear-gradient(90deg, #121216 0.000%, #121216 7.692%, #16171a calc(7.692% + 1px), #16171a 15.385%, #1a1b1f calc(15.385% + 1px), #1a1b1f 23.077%, #1f2023 calc(23.077% + 1px), #1f2023 30.769%, #232427 calc(30.769% + 1px), #232427 38.462%, #27282b calc(38.462% + 1px), #27282b 46.154%, #2b2c2f calc(46.154% + 1px), #2b2c2f 53.846%, #2f3033 calc(53.846% + 1px), #2f3033 61.538%, #323337 calc(61.538% + 1px), #323337 69.231%, #36373a calc(69.231% + 1px), #36373a 76.923%, #38393d calc(76.923% + 1px), #38393d 84.615%, #3b3c40 calc(84.615% + 1px), #3b3c40 92.308%, #3d3e42 calc(92.308% + 1px) 100.000%);
-    
-    
-/*     --color-primary: #3b82f6;
-    --color-font-primary: #d1d9e8;
-    --color-gray-100: #f3f4f6;
-    --color-gray-900: #111827;
-    */
-    
+
+
+    /*     --color-primary: #3b82f6;
+        --color-font-primary: #d1d9e8;
+        --color-gray-100: #f3f4f6;
+        --color-gray-900: #111827;
+        */
+
     .text-font-primary {
-        color: var(--color-font-primary);
+        color: var(--color-secondary);
+    }
+
+    .hover-white:hover {
+        color: var(--color-white)
+    }
+
+    .hover-purple:hover {
+        color: var(--color-purple-hover)
+    }
+
+    .glass {
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
     }
     
 }
