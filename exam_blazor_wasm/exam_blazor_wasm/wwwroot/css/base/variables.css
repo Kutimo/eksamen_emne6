@@ -5,10 +5,11 @@
     --spacing-8: 2rem;
 
     --color-primary: #3b82f6;
-    --color-secondary: rgba(24, 2, 2, 0);
+    --color-secondary: rgb(24, 2, 2);
     --color-white: #ffffff;
     --color-purple-hover: #a78bfa;
     --color-font-primary: #edeaea;
     --color-gray-100: #f3f4f6;
     --color-gray-900: #111827;
+    --color-gray-950: #0a0a0b;
 }

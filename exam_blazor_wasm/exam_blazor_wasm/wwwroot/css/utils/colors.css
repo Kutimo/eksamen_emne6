@@ -12,7 +12,19 @@ body {
         */
 
     .text-font-primary {
+        color: var(--color-primary);
+    }
+
+    .text-font-secondary {
         color: var(--color-secondary);
+    }
+
+    .text-primary {
+        color: var(--color-white);
+    }
+
+    .text-gray-400 {
+        color: rgba(255, 255, 255, 0.6);
     }
 
     .hover-white:hover {
@@ -24,11 +36,23 @@ body {
     }
 
     .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 14px;
+    }
+    
+    .glass-dark {
         background: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
     }
-    
+
+    .bg-gray-950 {
+        background-color: var(--color-gray-950);
+    }
+
 }

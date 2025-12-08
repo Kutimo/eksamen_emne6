@@ -3,7 +3,7 @@
 ## Oppgave 1: Blazor WebAssembly App
 
 ### Grunnleggende oppsett
-- [ ] Opprett nytt Blazor WebAssembly-prosjekt (standalone, ingen backend)
+- [x] Opprett nytt Blazor WebAssembly-prosjekt (standalone, ingen backend)
 - [ ] Sett opp HttpClient med Dependency Injection
 - [ ] Opprett service for Random User API-kommunikasjon
 
