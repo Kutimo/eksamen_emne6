@@ -1,0 +1,48 @@
+@page "/readme"
+@using System.Reflection
+@using System.IO
+@using Markdig
+
+<PageTitle>README</PageTitle>
+
+<div class="p-4">
+    @if (!string.IsNullOrEmpty(_htmlContent))
+    {
+        <div class="readme-content">
+            @((MarkupString)_htmlContent)
+        </div>
+    }
+    else
+    {
+        <p>Loading README...</p>
+    }
+</div>
+
+@code {
+    private string? _htmlContent;
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "exam_blazor_wasm.README.md";
+
+            using var stream = assembly.GetManifestResourceStream(resourceName);
+            if (stream != null)
+            {
+                using var reader = new StreamReader(stream);
+                var markdown = reader.ReadToEnd();
+                _htmlContent = Markdown.ToHtml(markdown);
+            }
+            else
+            {
+                _htmlContent = "<p>README.md not found.</p>";
+            }
+        }
+        catch (Exception ex)
+        {
+            _htmlContent = $"<p>Error loading README: {ex.Message}</p>";
+        }
+    }
+}
