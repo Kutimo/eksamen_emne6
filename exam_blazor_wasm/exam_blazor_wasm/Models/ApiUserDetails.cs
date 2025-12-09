@@ -38,6 +38,11 @@ namespace exam_blazor_wasm.Models;
         public DateTime Date { get; set; }
     }
 
+    public class ApiLogin
+    {
+        public string Uuid { get; set; } = string.Empty;
+    }
+
     public class ApiPicture
     {
         public string Large { get; set; } = string.Empty;

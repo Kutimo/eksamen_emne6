@@ -21,6 +21,7 @@ public class UserService(HttpClient httpClient) : IUserService
     {
         return new User
         {
+            Id = apiUser.Login.Uuid,
             Title = apiUser.Name.Title,
             FullName = $"{apiUser.Name.First} {apiUser.Name.Last}",
             Gender = apiUser.Gender,

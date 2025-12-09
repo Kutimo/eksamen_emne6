@@ -1,25 +1,38 @@
 @page "/profiles"
 @inject IUserService UserService
 
+<ProfileControls OnCountChange="HandleCountChange" OnSearchChange="HandleSearchChange" OnRefresh="LoadUsers" />
+
 @if (_isLoading)
 {
-    @for (int i = 0; i < Count; i++)
+    @for (int i = 0; i < _count; i++)
     {
-        <UserCardSkeleton />
+        var index = i;
+        <UserCardSkeleton @key="index" />
     }
 }
 else
 {
-    @foreach (var user in _users)
+    @foreach (var user in FilteredUsers)
     {
-        <UserCard User="user" />
+        <UserCard @key="user.Id" User="user" />
     }
 }
 
 @code {
     private List<User> _users = [];
     private bool _isLoading = true;
-    private const int Count = 10;
+    private int _count = 10;
+    private string _searchText = string.Empty;
+
+    private IEnumerable<User> FilteredUsers => string.IsNullOrWhiteSpace(_searchText)
+        ? _users
+        : _users.Where(u => 
+            u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
+            u.Gender.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
+            u.Country.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
+            u.City.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
+            u.State.Contains(_searchText, StringComparison.OrdinalIgnoreCase));
 
     protected override async Task OnInitializedAsync()
     {
@@ -29,7 +42,18 @@ else
     private async Task LoadUsers()
     {
         _isLoading = true;
-        _users = await UserService.GetUsersAsync(Count);
+        _users = await UserService.GetUsersAsync(_count);
         _isLoading = false;
+    }
+
+    private async Task HandleCountChange(int count)
+    {
+        _count = count;
+        await LoadUsers();
+    }
+
+    private void HandleSearchChange(string searchText)
+    {
+        _searchText = searchText;
     }
 }

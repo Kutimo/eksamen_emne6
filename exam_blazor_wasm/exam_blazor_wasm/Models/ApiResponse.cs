@@ -7,6 +7,7 @@ public class ApiResponse
 
 public class ApiUser
 {
+    public ApiLogin Login { get; set; } = new();
     public string Gender { get; set; } = string.Empty;
     public ApiName Name { get; set; } = new();
     public ApiLocation Location { get; set; } = new();
