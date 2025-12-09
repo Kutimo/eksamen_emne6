@@ -1,0 +1,23 @@
+.rounded {
+    border-radius: 4px;
+}
+
+.rounded-lg {
+    border-radius: 8px;
+}
+
+.rounded-xl {
+    border-radius: 12px;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.bg-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}

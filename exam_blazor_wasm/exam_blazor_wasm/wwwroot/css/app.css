@@ -4,7 +4,9 @@
 @import 'utils/flex.css';
 @import 'utils/typography.css';
 @import 'utils/colors.css';
-
+@import 'utils/effects.css';
+@import 'utils/sizing.css';
+@import 'utils/positoning.css';
 
 body {
     font-family: var(--font-main), sans-serif;
