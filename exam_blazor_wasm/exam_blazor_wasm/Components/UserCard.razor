@@ -1,0 +1,15 @@
+
+<div>
+<img src="@User.ThumbnailUrl" alt="@User.FullName"/>    
+<ul>
+    <li>@User.FullName</li>
+    <li>@User.Gender</li>
+    <li>@User.Country</li>
+    <li>@User.Email</li>
+</ul>
+</div>
+
+@code {
+    [Parameter]
+    public User User { get; set; } = new();
+}

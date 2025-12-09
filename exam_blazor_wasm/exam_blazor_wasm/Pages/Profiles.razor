@@ -1,15 +1,19 @@
 @page "/profiles"
-@using exam_blazor_wasm.Services
-@using exam_blazor_wasm.Models
 @inject IUserService UserService
 <h1>Profiles</h1>
 
+@foreach (var user in _users)
+{
+    <UserCard User="user"/>
+}
+
 
 @code {
-    protected override async Task OnInitializedAsync() {
-        var users = await UserService.GetUsersAsync(10);
-        foreach (var user in users) {
-            Console.WriteLine($"{user.Title} {user.FullName} - {user.Country} - {user.Email}");
-        }
+    private List<User> _users = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        _users = await UserService.GetUsersAsync(40);
     }
+
 }
