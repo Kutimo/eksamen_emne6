@@ -7,27 +7,30 @@
 {
     @for (int i = 0; i < _count; i++)
     {
-        var index = i;
-        <UserCardSkeleton @key="index" />
+        <UserCardSkeleton />
     }
 }
 else
 {
     @foreach (var user in FilteredUsers)
     {
-        <UserCard @key="user.Id" User="user" />
+        <UserCard @key="user.Id" User="user" OnClick="OpenModal" />
     }
 }
+
+<UserDetailsModal User="_selectedUser" IsOpen="_isModalOpen" OnClose="CloseModal" />
 
 @code {
     private List<User> _users = [];
     private bool _isLoading = true;
     private int _count = 10;
     private string _searchText = string.Empty;
+    private User? _selectedUser;
+    private bool _isModalOpen;
 
     private IEnumerable<User> FilteredUsers => string.IsNullOrWhiteSpace(_searchText)
         ? _users
-        : _users.Where(u => 
+        : _users.Where(u =>
             u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
             u.Gender.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
             u.Country.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
@@ -55,5 +58,17 @@ else
     private void HandleSearchChange(string searchText)
     {
         _searchText = searchText;
+    }
+
+    private void OpenModal(User user)
+    {
+        _selectedUser = user;
+        _isModalOpen = true;
+    }
+
+    private void CloseModal()
+    {
+        _isModalOpen = false;
+        _selectedUser = null;
     }
 }

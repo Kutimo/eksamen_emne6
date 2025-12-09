@@ -1,5 +1,5 @@
 <div>
-    <img src="@User.ThumbnailUrl" alt="@User.FullName"/>
+    <img src="@User.ThumbnailUrl" alt="@User.FullName" @onclick="HandleClick"/>
     <ul class="text-font-white">
         <li>@User.FullName</li>
         <li>@User.Gender</li>
@@ -10,4 +10,11 @@
 
 @code {
     [Parameter] public User User { get; set; } = new();
+    [Parameter] public EventCallback<User> OnClick { get; set; }
+
+    private async Task HandleClick()
+    {
+        await OnClick.InvokeAsync(User);
+    }
+
 }

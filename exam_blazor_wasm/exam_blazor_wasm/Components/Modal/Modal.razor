@@ -1,6 +1,12 @@
+@inject IJSRuntime JS
+
 @if (IsOpen)
 {
-    <div class="fixed inset-0 z-50 flex justify-center items-center bg-overlay" @onclick="HandleBackdropClick">
+    <div @ref="_modalElement"
+         class="fixed inset-0 z-50 flex justify-center items-center bg-overlay"
+         @onclick="HandleBackdropClick"
+         @onkeydown="HandleKeyDown"
+         tabindex="-1">
         <div class="relative bg-gray-100 p-8 rounded-lg max-w-md w-90" @onclick:stopPropagation="true">
             <button class="absolute top-0 right-0 p-2 cursor-pointer" @onclick="Close">×</button>
             @ChildContent
@@ -13,6 +19,16 @@
     [Parameter] public EventCallback OnClose { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }
 
+    private ElementReference _modalElement;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (IsOpen)
+        {
+            await JS.InvokeVoidAsync("eval", $"document.querySelector('[tabindex=\"-1\"]')?.focus()");
+        }
+    }
+
     private async Task Close()
     {
         await OnClose.InvokeAsync();
@@ -21,6 +37,14 @@
     private async Task HandleBackdropClick()
     {
         await OnClose.InvokeAsync();
+    }
+
+    private async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            await Close();
+        }
     }
 
 }

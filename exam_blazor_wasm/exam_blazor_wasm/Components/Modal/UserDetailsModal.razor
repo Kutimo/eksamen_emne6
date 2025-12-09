@@ -1,0 +1,28 @@
+@using exam_blazor_wasm.Models
+
+<Modal IsOpen="IsOpen" OnClose="OnClose">
+    @if (User is not null)
+    {
+        <div class="flex flex-col items-center text-center">
+            <img class="rounded-full mb-4" src="@User.LargeImageUrl" alt="@User.FullName"/>
+            <h2 class="text-xl font-bold mb-4">@User.Title @User.FullName</h2>
+            <p class="mb-2"><span class="font-medium">Age:</span> @User.Age</p>
+            <p class="mb-2"><span class="font-medium">Gender:</span> @User.Gender</p>
+            <p class="mb-2"><span class="font-medium">Email:</span> @User.Email</p>
+            <p class="mb-2"><span class="font-medium">Phone:</span> @User.Phone</p>
+            <p class="mb-2"><span
+                    class="font-medium">Address:</span> @User.StreetNumber @User.StreetName, @User.City, @User.State, @User.Country @User.Postcode
+            </p>
+            <p class="mb-2"><span class="font-medium">Nationality:</span> @User.Nationality</p>
+            <p class="mb-2"><span class="font-medium">Registered:</span> @User.RegisteredDate.ToString("dd MMM yyyy")
+            </p>
+        </div>
+    }
+
+</Modal>
+
+@code {
+    [Parameter] public User? User { get; set; }
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+}

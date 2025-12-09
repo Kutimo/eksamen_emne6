@@ -22,11 +22,15 @@ body {
     .text-font-white {
         color: var(--color-white);
     }
-
-    .text-gray-400 {
-        color: rgba(255, 255, 255, 0.6);
+    .text-gray-100 {
+        color: var(--color-gray-100);
     }
-
+    .text-gray-400 {
+        color: var(--color-gray-400);
+    }
+    .bg-gray-950 {
+        background-color: var(--color-gray-950);
+    }
     .hover-white:hover {
         color: var(--color-white)
     }
@@ -51,8 +55,6 @@ body {
         border-radius: 12px;
     }
 
-    .bg-gray-950 {
-        background-color: var(--color-gray-950);
-    }
+   
 
 }
