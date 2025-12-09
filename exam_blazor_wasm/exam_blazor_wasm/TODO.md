@@ -4,15 +4,15 @@
 
 ### Grunnleggende oppsett
 - [x] Opprett nytt Blazor WebAssembly-prosjekt (standalone, ingen backend)
-- [ ] Sett opp HttpClient med Dependency Injection
-- [ ] Opprett service for Random User API-kommunikasjon
+- [x] Sett opp HttpClient med Dependency Injection
+- [x] Opprett service for Random User API-kommunikasjon
 
 ### Funksjonelle krav
 
 **1. Hente og vise brukere**
 - [x] Hent minst 10 brukere fra `https://randomuser.me/api/?results=10`
 - [x] Vis brukere i liste/tabell/kort-format
-- [ ] For hver bruker, vis:
+- [x] For hver bruker, vis:
     - [ ] Profilbilde (thumbnail/medium/large)
     - [ ] Fullt navn
     - [ ] Kjønn
