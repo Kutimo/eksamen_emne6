@@ -10,8 +10,8 @@
 ### Funksjonelle krav
 
 **1. Hente og vise brukere**
-- [ ] Hent minst 10 brukere fra `https://randomuser.me/api/?results=10`
-- [ ] Vis brukere i liste/tabell/kort-format
+- [x] Hent minst 10 brukere fra `https://randomuser.me/api/?results=10`
+- [x] Vis brukere i liste/tabell/kort-format
 - [ ] For hver bruker, vis:
     - [ ] Profilbilde (thumbnail/medium/large)
     - [ ] Fullt navn
@@ -21,7 +21,7 @@
 
 **2. Detaljvisning**
 - [ ] Implementer klikk-handling på bruker i lista
-- [] make modal for this
+- [] make modal for this and onclickOutside and escape key close
 - [ ] Vis detaljside med:
     - [ ] Større bilde (medium/large)
     - [ ] Fullt navn
@@ -41,6 +41,9 @@ Make a search bar
 - [ ] "Hent nye brukere"-knapp
 - [ ] Nytt API-kall ved klikk
 - [ ] Oppdater listevisning
+
+4.5
+- [ ] Make a nice error page and error blazor error.
 
 **5. Feilhåndtering**
 - [ ] Håndter lastetilstand (loading spinner/melding)
