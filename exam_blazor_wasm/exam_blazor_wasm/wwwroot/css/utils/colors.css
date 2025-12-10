@@ -1,77 +1,91 @@
-
 body {
-    /* https://grabient.com/HQBgrAzANKAsAcMT0cAjLAnDNYDsOsATDEUSKWicGWlBMHmtA3kS8AGybShgVpQIAUIoggA?style=linearSwatches */
-
     background: linear-gradient(90deg, #121216 0.000%, #121216 7.692%, #16171a calc(7.692% + 1px), #16171a 15.385%, #1a1b1f calc(15.385% + 1px), #1a1b1f 23.077%, #1f2023 calc(23.077% + 1px), #1f2023 30.769%, #232427 calc(30.769% + 1px), #232427 38.462%, #27282b calc(38.462% + 1px), #27282b 46.154%, #2b2c2f calc(46.154% + 1px), #2b2c2f 53.846%, #2f3033 calc(53.846% + 1px), #2f3033 61.538%, #323337 calc(61.538% + 1px), #323337 69.231%, #36373a calc(69.231% + 1px), #36373a 76.923%, #38393d calc(76.923% + 1px), #38393d 84.615%, #3b3c40 calc(84.615% + 1px), #3b3c40 92.308%, #3d3e42 calc(92.308% + 1px) 100.000%);
+}
 
-    .text-font-primary {
-        color: var(--color-primary);
-    }
+.text-blue-500 {
+    color: var(--color-blue-500);
+}
 
-    .text-font-secondary {
-        color: var(--color-secondary);
-    }
+.text-gray-100 {
+    color: var(--color-gray-100);
+}
 
-    .text-font-white {
-        color: var(--color-white);
-    }
+.text-gray-400 {
+    color: var(--color-gray-400);
+}
 
-    .text-gray-100 {
-        color: var(--color-gray-100);
-    }
+.text-gray-900 {
+    color: var(--color-gray-900);
+}
 
-    .text-gray-400 {
-        color: var(--color-gray-400);
-    }
+.text-white {
+    color: var(--color-white);
+}
 
-    .bg-white {
-        background: var(--color-white);
-    }
-    
-    .bg-primary{
-        background: var(--color-primary);
-    }
+.bg-blue-500 {
+    background: var(--color-blue-500);
+}
 
-    .bg-gray-800 {
-        background-color: var(--color-gray-800);
-    }
+.bg-gray-100 {
+    background: var(--color-gray-100);
+}
 
-    .bg-gray-950 {
-        background-color: var(--color-gray-950);
-    }
+.bg-gray-800 {
+    background-color: var(--color-gray-800);
+}
 
+.bg-gray-900 {
+    background-color: var(--color-gray-900);
+}
 
-    .bg-transparent {
-        background-color: transparent;
-    }
+.bg-gray-950 {
+    background-color: var(--color-gray-950);
+}
 
-    .hover-white:hover {
-        color: var(--color-white)
-    }
+.bg-transparent {
+    background-color: transparent;
+}
 
-    .hover-purple:hover {
-        color: var(--color-purple-hover)
-    }
+.bg-white {
+    background: var(--color-white);
+}
 
-    .glass {
-        background: var(--color-white-10);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid var(--color-white-20);
-        border-radius: 14px;
-    }
+.hover\:text-white:hover {
+    color: var(--color-white);
+}
 
-    .glass-dark {
-        background: var(--color-black-20);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid var(--color-white-10);
-        border-radius: 12px;
-    }
+.hover\:text-purple-400:hover {
+    color: var(--color-purple-400);
+}
 
-    .bg-nav {
-        background: color-mix(in srgb, var(--color-gray-100) 75%, transparent);
-    }
+.glass {
+    background: var(--color-white-10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--color-white-20);
+    border-radius: 14px;
+}
 
+.glass-dark {
+    background: var(--color-black-20);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-white-10);
+    border-radius: 12px;
+}
 
+.bg-nav {
+    background: color-mix(in srgb, var(--color-gray-100) 75%, transparent);
+}
+
+.text-font-primary {
+    color: var(--color-font-primary);
+}
+
+.text-font-secondary {
+    color: var(--color-secondary);
+}
+
+.text-font-white {
+    color: var(--color-white);
 }

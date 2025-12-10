@@ -97,11 +97,11 @@
     bottom: var(--spacing-4);
 }
 
-.top-50 {
+.top-1\/2 {
     top: 50%;
 }
 
-.translate-y-50 {
+.-translate-y-1\/2 {
     transform: translateY(-50%);
 }
 

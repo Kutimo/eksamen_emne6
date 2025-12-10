@@ -1,21 +1,9 @@
-.w-90 {
-    width: 90%;
+.w-12 {
+    width: 3rem;
 }
 
-.w-full {
-    width: 100%;
-}
-
-.max-w-sm {
-    max-width: 24rem;
-}
-
-.max-w-md {
-    max-width: 28rem;
-}
-
-.max-w-lg {
-    max-width: 32rem;
+.w-16 {
+    width: 4rem;
 }
 
 .w-48 {
@@ -42,6 +30,54 @@
     width: 24rem;
 }
 
+.w-1\/2 {
+    width: 50%;
+}
+
+.w-3\/5 {
+    width: 60%;
+}
+
+.w-4\/5 {
+    width: 80%;
+}
+
+.w-9\/10 {
+    width: 90%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-4 {
+    height: 1rem;
+}
+
+.h-12 {
+    height: 3rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.max-w-sm {
+    max-width: 24rem;
+}
+
+.max-w-md {
+    max-width: 28rem;
+}
+
+.max-w-lg {
+    max-width: 32rem;
+}
+
+.max-w-3xl {
+    max-width: 48rem;
+}
+
 .min-w-48 {
     min-width: 12rem;
 }
@@ -66,34 +102,14 @@
     min-width: 24rem;
 }
 
-.w-35ch {
-    width: 35ch;
-}
-
-.w-48px {
-    width: 48px;
-}
-
-.h-48px {
-    height: 48px;
-}
-
-.w-60 {
-    width: 60%;
-}
-
-.w-80 {
-    width: 80%;
-}
-
-.min-h-90vh {
-    min-height: 90vh;
-}
-
 .min-h-screen {
     min-height: 100vh;
 }
 
-.h-full {
-    height: 100%;
+.w-\[35ch\] {
+    width: 35ch;
+}
+
+.min-h-\[90vh\] {
+    min-height: 90vh;
 }

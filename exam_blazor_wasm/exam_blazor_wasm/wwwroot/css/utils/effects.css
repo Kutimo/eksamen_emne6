@@ -22,7 +22,7 @@
     cursor: pointer;
 }
 
-.bg-overlay {
+.bg-black\/50 {
     background: var(--color-black-50);
 }
 
