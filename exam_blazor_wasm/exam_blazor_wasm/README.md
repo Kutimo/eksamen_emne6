@@ -8,11 +8,14 @@
 typography page:  
 [syntax.fm](https://syntax.fm/system/typography)  
 CSS classes inspiration:  
-[tailwind](https://tailwindcss.com/docs/installation/using-vite)
+[tailwind](https://tailwindcss.com/docs/installation/using-vite)  
 Landing page illustration:  
-[undraw](https:https://undraw.co/illustrations/3)
+[undraw](https:https://undraw.co/illustrations/3)  
 Favicon icons:  
-[realfavicongenerator](https://realfavicongenerator.net/your-favicon-is-ready)
+[realfavicongenerator](https://realfavicongenerator.net/your-favicon-is-ready)  
+Icons and fonts:    
+[Google fonts](https://fonts.google.com/icons)
+
 ### Ai use:
 
 Can be found in the AIUSE.md file.

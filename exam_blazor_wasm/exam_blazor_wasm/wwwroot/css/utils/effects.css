@@ -21,3 +21,19 @@
 .bg-overlay {
     background: rgba(0, 0, 0, 0.5);
 }
+
+.inline-block {
+    display: inline-block;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.hidden {
+    display: none;
+}
