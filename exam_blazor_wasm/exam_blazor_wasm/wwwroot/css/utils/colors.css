@@ -15,15 +15,36 @@ body {
     .text-font-white {
         color: var(--color-white);
     }
+
     .text-gray-100 {
         color: var(--color-gray-100);
     }
+
     .text-gray-400 {
         color: var(--color-gray-400);
     }
+
+    .bg-white {
+        background: var(--color-white);
+    }
+    
+    .bg-primary{
+        background: var(--color-primary);
+    }
+
+    .bg-gray-800 {
+        background-color: #1f2937;
+    }
+
     .bg-gray-950 {
         background-color: var(--color-gray-950);
     }
+
+
+    .bg-transparent {
+        background-color: transparent;
+    }
+
     .hover-white:hover {
         color: var(--color-white)
     }
@@ -48,6 +69,5 @@ body {
         border-radius: 12px;
     }
 
-   
 
 }
