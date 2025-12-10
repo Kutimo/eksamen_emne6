@@ -65,3 +65,35 @@
 .min-w-96 {
     min-width: 24rem;
 }
+
+.w-35ch {
+    width: 35ch;
+}
+
+.w-48px {
+    width: 48px;
+}
+
+.h-48px {
+    height: 48px;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.min-h-90vh {
+    min-height: 90vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.h-full {
+    height: 100%;
+}

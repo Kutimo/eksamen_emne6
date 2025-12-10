@@ -17,10 +17,4 @@
       <EmbeddedResource Include="README.md" />
     </ItemGroup>
 
-    <ItemGroup>
-      <None Update="Components\UserCardSkeleton.razor.css">
-        <DependentUpon>UserCardSkeleton.razor.razor</DependentUpon>
-      </None>
-    </ItemGroup>
-
 </Project>

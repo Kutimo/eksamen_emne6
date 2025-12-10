@@ -69,5 +69,9 @@ body {
         border-radius: 12px;
     }
 
+    .bg-nav {
+        background: color-mix(in srgb, var(--color-gray-100) 75%, transparent);
+    }
+
 
 }

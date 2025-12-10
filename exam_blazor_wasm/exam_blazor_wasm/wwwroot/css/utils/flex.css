@@ -101,3 +101,13 @@
 .gap-10 {
     gap: var(--spacing-10);
 }
+
+.grid-cols-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media (max-width: 768px) {
+    .md\:grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+}
