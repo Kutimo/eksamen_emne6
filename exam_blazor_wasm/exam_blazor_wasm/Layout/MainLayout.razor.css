@@ -6,6 +6,6 @@
 
 main {
     min-height: 90vh;
-    padding: 1rem;
+    padding: var(--spacing-4);
 }
 

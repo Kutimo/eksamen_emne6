@@ -34,12 +34,12 @@ html {
 #blazor-error-ui .dismiss {
     cursor: pointer;
     position: absolute;
-    right: 0.75rem;
-    top: 0.5rem;
+    right: var(--spacing-3);
+    top: var(--spacing-2);
 }
 
 .error-message {
-    padding: 1rem;
+    padding: var(--spacing-4);
     background: var(--color-red-100);
     color: var(--color-red-600);
     border-radius: 8px;
@@ -52,7 +52,7 @@ html {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    gap: 1rem;
+    gap: var(--spacing-4);
 }
 
 .app-loading .spinner {

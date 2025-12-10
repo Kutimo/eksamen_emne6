@@ -34,19 +34,67 @@
 }
 
 .right-1 {
-    right: 0.25rem;
+    right: var(--spacing-1);
 }
 
 .right-2 {
-    right: 0.5rem;
+    right: var(--spacing-2);
 }
 
 .right-3 {
-    right: 0.75rem;
+    right: var(--spacing-3);
 }
 
 .right-4 {
-    right: 1rem;
+    right: var(--spacing-4);
+}
+
+.left-1 {
+    left: var(--spacing-1);
+}
+
+.left-2 {
+    left: var(--spacing-2);
+}
+
+.left-3 {
+    left: var(--spacing-3);
+}
+
+.left-4 {
+    left: var(--spacing-4);
+}
+
+.top-1 {
+    top: var(--spacing-1);
+}
+
+.top-2 {
+    top: var(--spacing-2);
+}
+
+.top-3 {
+    top: var(--spacing-3);
+}
+
+.top-4 {
+    top: var(--spacing-4);
+}
+
+.bottom-1 {
+    bottom: var(--spacing-1);
+}
+
+.bottom-2 {
+    bottom: var(--spacing-2);
+}
+
+.bottom-3 {
+    bottom: var(--spacing-3);
+}
+
+.bottom-4 {
+    bottom: var(--spacing-4);
 }
 
 .top-50 {
