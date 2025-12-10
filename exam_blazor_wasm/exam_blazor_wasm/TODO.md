@@ -46,18 +46,19 @@ Make a search bar
 - [ ] Make a nice error page and error blazor error.
 
 **5. Feilhåndtering**
-- [ ] Håndter lastetilstand (loading spinner/melding)
+- [x] Håndter lastetilstand (loading spinner/melding)
 - [x] Håndter feil ved API-kall (feilmelding til bruker)
 
 Annet: 
-- [ ] favicon
+- [x] favicon
 - [ ] fix ugly errors
-- [] make CSS lib with reusable code
-- [] accesibility checks
-- [] remove unused props in model for api call
+- [ ] make CSS lib with reusable code
+- [ ] remove duplcate css in app.css and razor.css files and change to css class lib.
+- [ ] accesibility checks
+- [ ] remove unused props in model for api call
 Testing:
-- [] unit test 
-- [] integrasjonstest
+- [ ] unit test 
+- [ ] integrasjonstest
 ---
 
 ## Oppgave 2: Video (8-12 min)

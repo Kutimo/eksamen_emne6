@@ -5,13 +5,14 @@
 
 ### Sources
 
-typography page:     
+typography page:  
 [syntax.fm](https://syntax.fm/system/typography)  
 CSS classes inspiration:  
 [tailwind](https://tailwindcss.com/docs/installation/using-vite)
-Landing page illustration:
+Landing page illustration:  
 [undraw](https:https://undraw.co/illustrations/3)
-
+Favicon icons:  
+[realfavicongenerator](https://realfavicongenerator.net/your-favicon-is-ready)
 ### Ai use:
 
 Can be found in the AIUSE.md file.
