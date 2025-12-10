@@ -37,3 +37,11 @@ html {
     right: 0.75rem;
     top: 0.5rem;
 }
+
+.error-message {
+    padding: 1rem;
+    background: var(--color-red-100);
+    color: var(--color-red-600);
+    border-radius: 8px;
+    text-align: center;
+}

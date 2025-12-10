@@ -13,17 +13,17 @@
 - [x] Hent minst 10 brukere fra `https://randomuser.me/api/?results=10`
 - [x] Vis brukere i liste/tabell/kort-format
 - [x] For hver bruker, vis:
-    - [ ] Profilbilde (thumbnail/medium/large)
-    - [ ] Fullt navn
-    - [ ] Kjønn
-    - [ ] Land
-    - [ ] E-post
+    - [x] Profilbilde (thumbnail/medium/large)
+    - [x] Fullt navn
+    - [x] Kjønn
+    - [x] Land
+    - [x] E-post
 
 **2. Detaljvisning**
-- [ ] Implementer klikk-handling på bruker i lista
-- [] make modal for this and onclickOutside and escape key close
-- [ ] Vis detaljside med:
-    - [ ] Større bilde (medium/large)
+- [x] Implementer klikk-handling på bruker i lista
+- [x] make modal for this and onclickOutside and escape key close
+- [x] Vis detaljside med:
+    - [x] Større bilde (medium/large)
     - [ ] Fullt navn
     - [ ] Alder
     - [ ] Kjønn
@@ -33,29 +33,31 @@
 
 **3. Filtrering/søk (minst én)**
 Make a search bar
-- [ ] Filtrering på kjønn (male/female/alle)
-- [ ] Filtrering på land
-- [ ] Søk etter navn
+- [x] Filtrering på kjønn (male/female/alle)
+- [x] Filtrering på land
+- [x] Søk etter navn
 
 **4. Oppdater brukere**
-- [ ] "Hent nye brukere"-knapp
-- [ ] Nytt API-kall ved klikk
-- [ ] Oppdater listevisning
+- [x] "Hent nye brukere"-knapp
+- [x] Nytt API-kall ved klikk
+- [x] Oppdater listevisning
 
 4.5
 - [ ] Make a nice error page and error blazor error.
 
 **5. Feilhåndtering**
 - [ ] Håndter lastetilstand (loading spinner/melding)
-- [ ] Håndter feil ved API-kall (feilmelding til bruker)
-
+- [x] Håndter feil ved API-kall (feilmelding til bruker)
 
 Annet: 
 - [ ] favicon
 - [ ] fix ugly errors
 - [] make CSS lib with reusable code
 - [] accesibility checks
-- 
+- [] remove unused props in model for api call
+Testing:
+- [] unit test 
+- [] integrasjonstest
 ---
 
 ## Oppgave 2: Video (8-12 min)
