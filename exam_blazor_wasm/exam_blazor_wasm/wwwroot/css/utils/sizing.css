@@ -2,6 +2,10 @@
     width: 90%;
 }
 
+.w-full {
+    width: 100%;
+}
+
 .max-w-sm {
     max-width: 24rem;
 }
