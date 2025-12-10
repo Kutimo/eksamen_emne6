@@ -4,5 +4,5 @@ nav {
 }
 
 .NavLink:hover {
-    color: #a78bfa;
+    color: var(--color-purple-400);
 }

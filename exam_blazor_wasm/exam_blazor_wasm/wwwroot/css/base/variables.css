@@ -10,15 +10,35 @@
     --spacing-9: 2.25rem;
     --spacing-10: 2.5rem;
 
-    --color-primary: #3b82f6;
-    --color-secondary: rgb(24, 2, 2);
+    /* Colors */
+    --color-blue-500: #3b82f6;
     --color-white: #ffffff;
-    --color-purple-hover: #a78bfa;
-    --color-font-primary: #edeaea;
+    --color-black: #000000;
+    --color-purple-400: #a78bfa;
+    --color-gray-50: #f9fafb;
     --color-gray-100: #f3f4f6;
-    --color-gray-400: #FFFFFF99;
+    --color-gray-400: #9ca3af;
+    --color-gray-600: #4b5563;
+    --color-gray-800: #1f2937;
     --color-gray-900: #111827;
     --color-gray-950: #0a0a0b;
     --color-red-100: #fee2e2;
     --color-red-600: #dc2626;
+    --color-yellow-100: lightyellow;
+
+    /* Opacity variant */
+    --color-black-5: rgba(0, 0, 0, 0.05);
+    --color-black-10: rgba(0, 0, 0, 0.1);
+    --color-black-20: rgba(0, 0, 0, 0.2);
+    --color-black-50: rgba(0, 0, 0, 0.5);
+    --color-white-5: rgba(255, 255, 255, 0.05);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-80: rgba(255, 255, 255, 0.8);
+
+    /* color */
+    --color-primary: var(--color-blue-500);
+    --color-secondary: rgb(24, 2, 2);
+    --color-purple-hover: var(--color-purple-400);
+    --color-font-primary: #edeaea;
 }
