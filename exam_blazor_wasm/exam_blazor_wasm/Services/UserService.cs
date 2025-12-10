@@ -5,16 +5,29 @@ namespace exam_blazor_wasm.Services;
 
 public class UserService(HttpClient httpClient) : IUserService
 {
-    private const string BaseUrl = "https://randomuser.me/api/?results=";
+    private const string BaseUrl = "https://randomuser.me/api/";
 
-    public async Task<List<User>> GetUsersAsync(int count)
+    public async Task<Result<List<User>>> GetUsersAsync(int count)
     {
-        var response = await httpClient.GetFromJsonAsync<ApiResponse>($"{BaseUrl}{count}");
-        
-        if (response?.Results == null)
-            return [];
-
-        return response.Results.Select(MapToUser).ToList();
+        try
+        {
+            var response = await httpClient.GetAsync($"{BaseUrl}?results={count}");
+            if (!response.IsSuccessStatusCode)
+                return Result<List<User>>.Failure($"Request failed: {(int)response.StatusCode}");
+            var apiResponse = await response.Content.ReadFromJsonAsync<ApiResponse>();
+            if (apiResponse?.Results == null)
+                return Result<List<User>>.Failure("No data received from API.");
+            var users = apiResponse.Results.Select(MapToUser).ToList();
+            return Result<List<User>>.Success(users);
+        }
+        catch (HttpRequestException)
+        {
+            return Result<List<User>>.Failure("Unable to connect. Check your internet connection.");
+        }
+        catch (Exception)
+        {
+            return Result<List<User>>.Failure("An unexpected error occurred.");
+        }
     }
 
     private static User MapToUser(ApiUser apiUser)

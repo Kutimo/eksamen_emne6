@@ -3,7 +3,14 @@
 
 <ProfileControls OnCountChange="HandleCountChange" OnSearchChange="HandleSearchChange" OnRefresh="LoadUsers" />
 
-@if (_isLoading)
+@if (!string.IsNullOrEmpty(_errorMessage))
+{
+    <div class="error-message">
+        <p>@_errorMessage</p>
+        <button @onclick="LoadUsers">Try Again</button>
+    </div>
+}
+else if (_isLoading)
 {
     @for (int i = 0; i < _count; i++)
     {
@@ -14,17 +21,18 @@ else
 {
     @foreach (var user in FilteredUsers)
     {
-        <UserCard @key="user.Id" User="user" OnClick="OpenModal" />
+        <UserCard @key="user.Id" User="user" OnClick="@OpenModal" />
     }
 }
 
-<UserDetailsModal User="_selectedUser" IsOpen="_isModalOpen" OnClose="CloseModal" />
+<UserDetailsModal User="@_selectedUser" IsOpen="@_isModalOpen" OnClose="@CloseModal" />
 
 @code {
     private List<User> _users = [];
     private bool _isLoading = true;
     private int _count = 10;
     private string _searchText = string.Empty;
+    private string? _errorMessage;
     private User? _selectedUser;
     private bool _isModalOpen;
 
@@ -45,7 +53,16 @@ else
     private async Task LoadUsers()
     {
         _isLoading = true;
-        _users = await UserService.GetUsersAsync(_count);
+        _errorMessage = null;
+        var result = await UserService.GetUsersAsync(_count);
+        if (result.IsSuccess)
+        {
+            _users = result.Data ?? [];
+        }
+        else
+        {
+            _errorMessage = result.ErrorMessage;
+        }
         _isLoading = false;
     }
 

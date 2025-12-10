@@ -4,5 +4,5 @@ namespace exam_blazor_wasm.Services;
 
 public interface IUserService
 {
-    Task<List<User>> GetUsersAsync(int count);
+    Task<Result<List<User>>> GetUsersAsync(int count);
 }
