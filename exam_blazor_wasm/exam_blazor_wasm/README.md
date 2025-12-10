@@ -9,6 +9,8 @@ typography page:
 [syntax.fm](https://syntax.fm/system/typography)  
 CSS classes inspiration:  
 [tailwind](https://tailwindcss.com/docs/installation/using-vite)
+Landing page illustration:
+[undraw](https:https://undraw.co/illustrations/3)
 
 ### Ai use:
 

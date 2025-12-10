@@ -8,7 +8,11 @@
 @import 'utils/sizing.css';
 @import 'utils/positoning.css';
 
-body {
+html {
+    background: var(--color-gray-950);
+}
+
+#app {
     font-family: var(--font-main), sans-serif;
 }
 

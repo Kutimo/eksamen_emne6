@@ -1,0 +1,6 @@
+
+.hero-text {
+    margin-top: var(--spacing-8);
+    width: 35ch;
+    display: inline-block;
+}
