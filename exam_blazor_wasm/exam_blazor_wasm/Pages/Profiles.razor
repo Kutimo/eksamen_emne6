@@ -1,5 +1,4 @@
 @page "/profiles"
-@inject IUserService UserService
 
 <PageTitle>Profiles</PageTitle>
 
@@ -21,7 +20,6 @@
         </div>
     }
 
-    @* <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"> *@
     <div class="grid grid-cols-auto-fit gap-4">
         @if (_isLoading)
         {
@@ -42,65 +40,3 @@
 
 <UserDetailsModal User="@_selectedUser" IsOpen="@_isModalOpen" OnClose="@CloseModal" />
 
-@code {
-    private List<User> _users = [];
-    private bool _isLoading = true;
-    private int _count = 10;
-    private string _searchText = string.Empty;
-    private string? _errorMessage;
-    private User? _selectedUser;
-    private bool _isModalOpen;
-
-    private IEnumerable<User> FilteredUsers => string.IsNullOrWhiteSpace(_searchText)
-        ? _users
-        : _users.Where(u =>
-            u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.Gender.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.Country.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.City.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.State.Contains(_searchText, StringComparison.OrdinalIgnoreCase));
-
-    protected override async Task OnInitializedAsync()
-    {
-        await LoadUsers();
-    }
-
-    private async Task LoadUsers()
-    {
-        _isLoading = true;
-        _errorMessage = null;
-        var result = await UserService.GetUsersAsync(_count);
-        if (result.IsSuccess)
-        {
-            _users = result.Data ?? [];
-        }
-        else
-        {
-            _errorMessage = result.ErrorMessage;
-        }
-        _isLoading = false;
-    }
-
-    private async Task HandleCountChange(int count)
-    {
-        _count = count;
-        await LoadUsers();
-    }
-
-    private void HandleSearchChange(string searchText)
-    {
-        _searchText = searchText;
-    }
-
-    private void OpenModal(User user)
-    {
-        _selectedUser = user;
-        _isModalOpen = true;
-    }
-
-    private void CloseModal()
-    {
-        _isModalOpen = false;
-        _selectedUser = null;
-    }
-}
