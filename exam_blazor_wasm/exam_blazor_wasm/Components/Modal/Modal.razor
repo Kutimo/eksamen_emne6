@@ -7,8 +7,8 @@
          @onclick="HandleBackdropClick"
          @onkeydown="HandleKeyDown"
          tabindex="-1">
-        <div class="relative bg-gray-100 p-8 rounded-lg max-w-md w-9/10" @onclick:stopPropagation="true">
-            <button class="absolute top-0 right-0 p-2 cursor-pointer" @onclick="Close">×</button>
+        <div class="relative bg-surface-elevated p-8 rounded-xl max-w-2xl w-9/10 border border-gray-700" @onclick:stopPropagation="true">
+            <button class="absolute top-4 right-4 text-muted hover:text-primary text-2xl w-8 h-8 flex items-center justify-center" @onclick="Close">×</button>
             @ChildContent
         </div>
     </div>

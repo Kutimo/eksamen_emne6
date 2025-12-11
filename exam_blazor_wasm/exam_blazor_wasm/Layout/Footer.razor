@@ -1,40 +1,33 @@
-<footer class="bg-gray-950 p-4">
-    <div class="grid grid-cols-auto-fit md:grid-cols-1 justify-items-center gap-8 p-6">
-        <div class="flex flex-col">
-            <h3 class="text-xl font-bold text-font-primary mb-4">
-                RandomStrangerStack</h3>
-            <p class="text-sm mb-2 text-font-white">Building connections through technology</p>
-            <p class="text-sm text-font-white">A modern web application built with Blazor
-                               WebAssembly</p>
+<footer class="bg-surface border-t border-gray-700 mt-20">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col">
+                <h3 class="text-lg font-bold text-primary mb-4">RandomStrangerStack</h3>
+                <p class="text-sm text-secondary mb-2">Building connections through technology</p>
+                <p class="text-sm text-muted">A modern web application built with Blazor WebAssembly</p>
+            </div>
+
+            <div class="flex flex-col">
+                <h4 class="text-base font-semibold text-primary mb-4">Navigation</h4>
+                <nav class="flex flex-col gap-3">
+                    <NavLink href="/" class="text-sm text-secondary hover:text-primary transition-colors">Home</NavLink>
+                    <NavLink href="/profiles" class="text-sm text-secondary hover:text-primary transition-colors">Profiles</NavLink>
+                </nav>
+            </div>
+
+            <div class="flex flex-col">
+                <h4 class="text-base font-semibold text-primary mb-4">Resources</h4>
+                <nav class="flex flex-col gap-3">
+                    <NavLink href="/readme" class="text-sm text-secondary hover:text-primary transition-colors">Documentation</NavLink>
+                    <a href="https://randomuser.me/documentation#howto" target="_blank" rel="noopener noreferrer" class="text-sm text-secondary hover:text-primary transition-colors">API Documentation</a>
+                </nav>
+            </div>
         </div>
 
-        <div class="flex flex-col">
-            <h4 class="text-base font-semibold text-font-primary my-3">Navigation</h4>
-            <nav class="flex flex-col gap-2 mt-1 text-font-white">
-                <NavLink href="/" class="text-sm hover:text-purple-400">Home
-                </NavLink>
-                <NavLink href="/profiles" class="text-sm hover:text-purple-400">
-                    Profiles
-                </NavLink>
-                <NavLink href="/typography" class="text-sm hover:text-purple-400">
-                    Typography
-                </NavLink>
-            </nav>
+        <div class="border-t border-gray-700 mt-8 pt-8">
+            <p class="text-sm text-center text-muted">
+                &copy; 2025 RandomStrangerStack. Built with Blazor WebAssembly.
+            </p>
         </div>
-
-        <div class="flex flex-col">
-            <h4 class="text-base font-semibold text-font-primary mb-3">Resources</h4>
-            <nav class="flex flex-col gap-2">
-                <NavLink href="/readme" class="text-sm hover:text-purple-400 text-font-white">Documentation</NavLink>
-                <a href="https://randomuser.me/documentation#howto" target="_blank" rel="noopener noreferer" class="text-sm hover:text-purple-400 text-font-white">Api used</a>
-            </nav>
-        </div>
-        
-    </div>
-
-    <div class="p-6 mt-4">
-        <p class="text-sm text-center text-gray-400">
-            &copy; 2025 RandomStrangerStack. Built with Blazor WebAssembly.
-        </p>
     </div>
 </footer>

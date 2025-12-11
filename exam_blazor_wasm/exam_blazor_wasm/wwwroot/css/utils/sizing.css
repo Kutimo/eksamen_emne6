@@ -2,8 +2,16 @@
     width: 3rem;
 }
 
+.w-8 {
+    width: 2rem;
+}
+
 .w-16 {
     width: 4rem;
+}
+
+.w-32 {
+    width: 8rem;
 }
 
 .w-48 {
@@ -50,12 +58,36 @@
     width: 100%;
 }
 
+.h-3 {
+    height: 0.75rem;
+}
+
 .h-4 {
     height: 1rem;
 }
 
+.h-5 {
+    height: 1.25rem;
+}
+
+.h-8 {
+    height: 2rem;
+}
+
 .h-12 {
     height: 3rem;
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+.h-32 {
+    height: 8rem;
+}
+
+.h-auto {
+    height: auto;
 }
 
 .h-full {
@@ -74,8 +106,20 @@
     max-width: 32rem;
 }
 
+.max-w-2xl {
+    max-width: 42rem;
+}
+
 .max-w-3xl {
     max-width: 48rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+.max-w-6xl {
+    max-width: 72rem;
 }
 
 .min-w-48 {
@@ -96,6 +140,10 @@
 
 .min-w-80 {
     min-width: 20rem;
+}
+
+.min-w-64 {
+    min-width: 16rem;
 }
 
 .min-w-96 {

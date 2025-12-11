@@ -1,29 +1,43 @@
 @page "/profiles"
 @inject IUserService UserService
 
-<ProfileControls OnCountChange="HandleCountChange" OnSearchChange="HandleSearchChange" OnRefresh="LoadUsers" />
+<PageTitle>Profiles</PageTitle>
 
-@if (!string.IsNullOrEmpty(_errorMessage))
-{
-    <div class="error-message">
-        <p>@_errorMessage</p>
-        <button @onclick="LoadUsers">Try Again</button>
+<div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="mb-8">
+        <h1 class="text-4xl font-bold text-primary mb-2">Random Profiles</h1>
+        <p class="text-secondary">Discover people from around the world</p>
     </div>
-}
-else if (_isLoading)
-{
-    @for (int i = 0; i < _count; i++)
+
+    <ProfileControls OnCountChange="HandleCountChange" OnSearchChange="HandleSearchChange" OnRefresh="LoadUsers" />
+
+    @if (!string.IsNullOrEmpty(_errorMessage))
     {
-        <UserCardSkeleton />
+        <div class="bg-red-600 text-white p-6 rounded-xl mb-8">
+            <p class="mb-4">@_errorMessage</p>
+            <button class="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold" @onclick="LoadUsers">
+                Try Again
+            </button>
+        </div>
     }
-}
-else
-{
-    @foreach (var user in FilteredUsers)
-    {
-        <UserCard @key="user.Id" User="user" OnClick="@OpenModal" />
-    }
-}
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        @if (_isLoading)
+        {
+            @for (int i = 0; i < _count; i++)
+            {
+                <UserCardSkeleton />
+            }
+        }
+        else
+        {
+            @foreach (var user in FilteredUsers)
+            {
+                <UserCard @key="user.Id" User="user" OnClick="@OpenModal" />
+            }
+        }
+    </div>
+</div>
 
 <UserDetailsModal User="@_selectedUser" IsOpen="@_isModalOpen" OnClose="@CloseModal" />
 

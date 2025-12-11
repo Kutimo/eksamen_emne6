@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(90deg, #121216 0.000%, #121216 7.692%, #16171a calc(7.692% + 1px), #16171a 15.385%, #1a1b1f calc(15.385% + 1px), #1a1b1f 23.077%, #1f2023 calc(23.077% + 1px), #1f2023 30.769%, #232427 calc(30.769% + 1px), #232427 38.462%, #27282b calc(38.462% + 1px), #27282b 46.154%, #2b2c2f calc(46.154% + 1px), #2b2c2f 53.846%, #2f3033 calc(53.846% + 1px), #2f3033 61.538%, #323337 calc(61.538% + 1px), #323337 69.231%, #36373a calc(69.231% + 1px), #36373a 76.923%, #38393d calc(76.923% + 1px), #38393d 84.615%, #3b3c40 calc(84.615% + 1px), #3b3c40 92.308%, #3d3e42 calc(92.308% + 1px) 100.000%);
+    background: var(--color-background);
 }
 
 .text-blue-500 {
@@ -22,12 +22,52 @@ body {
     color: var(--color-white);
 }
 
+.text-primary {
+    color: var(--color-text-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
 .bg-blue-500 {
     background: var(--color-blue-500);
 }
 
+.bg-primary {
+    background: var(--color-primary);
+}
+
+.bg-accent {
+    background: var(--color-accent);
+}
+
+.bg-surface {
+    background: var(--color-surface);
+}
+
+.bg-surface-elevated {
+    background: var(--color-surface-elevated);
+}
+
+.bg-background {
+    background: var(--color-background);
+}
+
 .bg-gray-100 {
     background: var(--color-gray-100);
+}
+
+.bg-gray-700 {
+    background: var(--color-gray-700);
 }
 
 .bg-gray-800 {
@@ -42,6 +82,10 @@ body {
     background-color: var(--color-gray-950);
 }
 
+.border-gray-700 {
+    border-color: var(--color-gray-700);
+}
+
 .bg-transparent {
     background-color: transparent;
 }
@@ -54,8 +98,8 @@ body {
     color: var(--color-white);
 }
 
-.hover\:text-purple-400:hover {
-    color: var(--color-purple-400);
+.hover\:text-blue-400:hover {
+    color: var(--color-blue-400);
 }
 
 .glass {
@@ -75,7 +119,8 @@ body {
 }
 
 .bg-nav {
-    background: color-mix(in srgb, var(--color-gray-100) 75%, transparent);
+    background: var(--color-surface-elevated);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .text-font-primary {
@@ -88,4 +133,20 @@ body {
 
 .text-font-white {
     color: var(--color-white);
+}
+
+.bg-red-600 {
+    background: var(--color-red-600);
+}
+
+.text-red-600 {
+    color: var(--color-red-600);
+}
+
+.hover\:bg-blue-600:hover {
+    background: var(--color-blue-600);
+}
+
+.hover\:bg-gray-700:hover {
+    background: var(--color-gray-700);
 }

@@ -1,11 +1,16 @@
-<div>
-    <img src="@User.ThumbnailUrl" alt="@User.FullName" @onclick="HandleClick"/>
-    <ul class="text-font-white">
-        <li>@User.FullName</li>
-        <li>@User.Gender</li>
-        <li>@User.Country</li>
-        <li>@User.Email</li>
-    </ul>
+<div class="bg-surface-elevated rounded-xl p-6 border border-gray-700 hover:border-primary transition-all cursor-pointer" @onclick="HandleClick">
+    <div class="flex items-center gap-4">
+        <img src="@User.ThumbnailUrl" alt="@User.FullName" class="w-16 h-16 rounded-full border-2 border-gray-700"/>
+        <div class="flex-1">
+            <h3 class="text-lg font-semibold text-primary mb-1">@User.FullName</h3>
+            <p class="text-sm text-secondary mb-1">@User.Email</p>
+            <div class="flex gap-3 text-xs text-muted">
+                <span>@User.Gender</span>
+                <span>•</span>
+                <span>@User.Country</span>
+            </div>
+        </div>
+    </div>
 </div>
 
 @code {
@@ -16,5 +21,4 @@
     {
         await OnClick.InvokeAsync(User);
     }
-
 }
