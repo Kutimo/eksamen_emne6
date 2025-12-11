@@ -10,6 +10,32 @@
     position: fixed;
 }
 
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+@media (min-width: 768px) {
+    .md\:order-1 {
+        order: 1;
+    }
+
+    .md\:order-2 {
+        order: 2;
+    }
+
+    .md\:order-3 {
+        order: 3;
+    }
+}
+
 .inset-0 {
     top: 0;
     right: 0;

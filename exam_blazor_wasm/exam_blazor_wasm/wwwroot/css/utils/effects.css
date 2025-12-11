@@ -109,3 +109,9 @@
     border-bottom-width: 1px;
     border-style: solid;
 }
+
+@media (min-width: 640px) {
+    .sm\:border-t-0 {
+        border-top-width: 0;
+    }
+}

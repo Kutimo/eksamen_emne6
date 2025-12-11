@@ -84,6 +84,12 @@
     text-align: right;
 }
 
+@media (min-width: 640px) {
+    .sm\:text-left {
+        text-align: left;
+    }
+}
+
 .hover\:underline:hover {
     text-decoration: underline;
 }
