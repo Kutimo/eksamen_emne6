@@ -18,6 +18,5 @@ public class User
     public string Country { get; set; } = string.Empty;
     public string Postcode { get; set; } = string.Empty;
     public string ThumbnailUrl { get; set; } = string.Empty;
-    public string MediumImageUrl { get; set; } = string.Empty;
     public string LargeImageUrl { get; set; } = string.Empty;
 }

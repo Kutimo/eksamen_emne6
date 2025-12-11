@@ -122,6 +122,10 @@
     max-width: 72rem;
 }
 
+.min-w-0 {
+    min-width: 0;
+}
+
 .min-w-48 {
     min-width: 12rem;
 }
@@ -169,4 +173,8 @@
 
 .min-h-screen {
     min-height: 100vh;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
 }

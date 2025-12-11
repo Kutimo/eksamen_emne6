@@ -50,7 +50,6 @@ public class UserService(HttpClient httpClient) : IUserService
             Country = apiUser.Location.Country,
             Postcode = apiUser.Location.Postcode,
             ThumbnailUrl = apiUser.Picture.Thumbnail,
-            MediumImageUrl = apiUser.Picture.Medium,
             LargeImageUrl = apiUser.Picture.Large
         };
     }

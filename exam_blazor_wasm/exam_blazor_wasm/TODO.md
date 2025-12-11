@@ -24,12 +24,12 @@
 - [x] make modal for this and onclickOutside and escape key close
 - [x] Vis detaljside med:
     - [x] Større bilde (medium/large)
-    - [ ] Fullt navn
-    - [ ] Alder
-    - [ ] Kjønn
-    - [ ] Adresse (by og land)
-    - [ ] E-post
-    - [ ] Telefonnummer
+    - [x] Fullt navn
+    - [x] Alder
+    - [x] Kjønn
+    - [x] Adresse (by og land)
+    - [x] E-post
+    - [x] Telefonnummer
 
 **3. Filtrering/søk (minst én)**
 Make a search bar
@@ -57,7 +57,7 @@ Annet:
 - [ ] accesibility checks
 - [ ] remove unused props in model for api call
 - [ ] change button to just x in modal
-- [] fix errors in markdown.css
+- [ ] fix errors in markdown.css
 - 
 Testing:
 - [ ] unit test 
