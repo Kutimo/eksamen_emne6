@@ -45,6 +45,7 @@
 
     /* color */
     --color-primary: var(--color-blue-500);
+    --color-secondary: var(--color-gray-400);
     --color-accent: var(--color-blue-400);
     --color-background: var(--color-gray-950);
     --color-surface: var(--color-gray-900);
@@ -53,4 +54,5 @@
     --color-text-primary: var(--color-gray-100);
     --color-text-secondary: var(--color-gray-400);
     --color-text-muted: var(--color-gray-500);
+    --color-font-primary: var(--color-gray-900);
 }

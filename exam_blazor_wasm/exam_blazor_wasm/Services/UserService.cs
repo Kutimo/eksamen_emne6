@@ -48,7 +48,6 @@ public class UserService(HttpClient httpClient) : IUserService
             City = apiUser.Location.City,
             State = apiUser.Location.State,
             Country = apiUser.Location.Country,
-            Postcode = apiUser.Location.Postcode,
             ThumbnailUrl = apiUser.Picture.Thumbnail,
             LargeImageUrl = apiUser.Picture.Large
         };

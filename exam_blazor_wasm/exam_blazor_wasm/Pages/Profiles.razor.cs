@@ -6,8 +6,8 @@ namespace exam_blazor_wasm.Pages;
 
 public partial class Profiles
 {
-    [Inject] private IUserService UserService { get; set; } = default!;
-    [Inject] private IUserFilterService UserFilterService { get; set; } = default!;
+    [Inject] private IUserService UserService { get; set; } = null!;
+    [Inject] private IUserFilterService UserFilterService { get; set; } = null!;
 
     private List<User> _users = [];
     private bool _isLoading = true;
