@@ -164,6 +164,18 @@
     .sm\:order-3 {
         order: 3;
     }
+
+    .sm\:flex-row {
+        flex-direction: row;
+    }
+
+    .sm\:gap-4 {
+        gap: var(--spacing-4);
+    }
+
+    .sm\:gap-8 {
+        gap: var(--spacing-8);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -173,6 +185,18 @@
 
     .lg\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .lg\:flex-row {
+        flex-direction: row;
+    }
+
+    .lg\:gap-16 {
+        gap: var(--spacing-16);
+    }
+
+    .lg\:justify-start {
+        justify-content: flex-start;
     }
 }
 

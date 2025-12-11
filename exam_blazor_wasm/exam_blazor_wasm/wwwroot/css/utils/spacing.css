@@ -238,6 +238,10 @@
     margin-bottom: var(--spacing-4);
 }
 
+.mb-6 {
+    margin-bottom: var(--spacing-6);
+}
+
 .mb-5 {
     margin-bottom: var(--spacing-5);
 }
@@ -517,5 +521,36 @@
     .sm\:py-0 {
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    .sm\:px-8 {
+        padding-left: var(--spacing-8);
+        padding-right: var(--spacing-8);
+    }
+
+    .sm\:mb-4 {
+        margin-bottom: var(--spacing-4);
+    }
+
+    .sm\:mb-6 {
+        margin-bottom: var(--spacing-6);
+    }
+
+    .sm\:mb-8 {
+        margin-bottom: var(--spacing-8);
+    }
+
+    .sm\:mb-10 {
+        margin-bottom: var(--spacing-10);
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:mb-6 {
+        margin-bottom: var(--spacing-6);
+    }
+
+    .lg\:mb-10 {
+        margin-bottom: var(--spacing-10);
     }
 }
