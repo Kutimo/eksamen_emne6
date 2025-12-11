@@ -1,17 +1,15 @@
 <div
-    class="bg-surface-elevated rounded-xl p-3 border border-gray-700 hover:border-primary transition-all cursor-pointer"
+    class="bg-surface-elevated rounded-xl p-1 md:p-3 border border-gray-700 hover:border-primary transition-all cursor-pointer flex items-center gap-4"
     @onclick="HandleClick">
-    <div class="flex items-center gap-4">
-        <img src="@User.ThumbnailUrl" alt="@User.FullName"
-             class="w-16 h-16 rounded-full border-2 border-gray-700 shrink-0"/>
-        <div class="flex-1 min-w-0">
-            <h3 class="text-lg font-semibold text-primary mb-2 truncate">@User.FullName</h3>
-            <p class="text-xs text-secondary mb-2 truncate">@User.Email</p>
-            <div class="flex gap-3 text-xs text-muted">
-                <span>@User.Gender</span>
-                <span>•</span>
-                <span class="truncate">@User.Country</span>
-            </div>
+    <img src="@User.ThumbnailUrl" alt="@User.FullName"
+         class="w-16 h-16 rounded-full border-2 border-gray-700 shrink-0"/>
+    <div class="flex-1 min-w-0">
+        <h3 class="text-lg font-semibold text-primary mb-2 truncate">@User.FullName</h3>
+        <p class="text-xs text-secondary mb-2 truncate">@User.Email</p>
+        <div class="flex gap-3 text-xs text-muted">
+            <span>@User.Gender</span>
+            <span>•</span>
+            <span class="truncate">@User.Country</span>
         </div>
     </div>
 </div>

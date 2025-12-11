@@ -8,6 +8,7 @@
 @import 'utils/sizing.css';
 @import 'utils/positoning.css';
 @import 'utils/markdown.css';
+@import 'utils/display.css';
 
 html {
     background: var(--color-gray-950);
@@ -71,5 +72,7 @@ html {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }

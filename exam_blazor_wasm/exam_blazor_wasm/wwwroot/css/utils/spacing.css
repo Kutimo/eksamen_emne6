@@ -335,12 +335,19 @@
     padding: var(--spacing-1);
 }
 
+
 .p-2 {
     padding: var(--spacing-2);
 }
 
 .p-3 {
     padding: var(--spacing-3);
+}
+
+@media (min-width: 768px) {
+    .md\:p-3 {
+        padding: var(--spacing-3);
+    }
 }
 
 .p-4 {

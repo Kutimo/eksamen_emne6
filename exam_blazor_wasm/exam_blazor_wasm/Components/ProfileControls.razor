@@ -1,10 +1,10 @@
 <div class="w-full max-w-6xl mx-auto mb-8">
     <div class="flex gap-4 items-center flex-wrap">
             <input type="text"
-                   class="bg-white rounded-lg flex-1 max-w-64 px-3 text-xl border border-gray-700 text-font-primary h-12 w-full outline-none placeholder-gray-400"
+                   class="bg-white rounded-lg flex-1 min-w-56 max-w-64 px-3 text-xl border border-gray-700 text-font-primary h-12 w-full outline-none placeholder-gray-400"
                    placeholder="Search by name, country, gender..."
                    @oninput="OnSearchInput"/>
-        <select class="bg-white text-font-primary text-xl px-3 rounded-lg border border-gray-700 h-12"
+        <select class="bg-white text-font-primary text-xl px-2 rounded-lg border border-gray-700 h-12"
                 @onchange="OnCountChanged">
             <option value="5">5 users</option>
             <option value="10" selected>10 users</option>
@@ -13,7 +13,7 @@
             <option value="100">100 users</option>
         </select>
         <button
-            class="bg-primary text-white text-xl px-6 rounded-lg font-semibold hover:bg-blue-600 hover:text-gray-800 transition-colors cursor-pointer h-12"
+            class="bg-primary text-white text-xl px-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-gray-800 transition-colors cursor-pointer h-12"
             @onclick="OnRefreshClick">
             Refresh
         </button>
