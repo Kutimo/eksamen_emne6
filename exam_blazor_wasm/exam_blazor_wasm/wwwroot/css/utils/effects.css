@@ -51,6 +51,14 @@
     border-color: var(--color-gray-600);
 }
 
+.border-primary {
+    border-color: var(--color-primary);
+}
+
+.hover\:border-primary:hover {
+    border-color: var(--color-primary);
+}
+
 .placeholder-gray-400::placeholder {
     color: var(--color-gray-400);
 }

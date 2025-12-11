@@ -16,6 +16,10 @@
     --font-main: 'JetBrains Mono', monospace;
 }
 
+.text-xs {
+    font-size: 0.75rem;
+}
+
 .text-sm {
     font-size: 0.875rem;
 }

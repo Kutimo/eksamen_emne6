@@ -98,6 +98,10 @@ body {
     color: var(--color-white);
 }
 
+.hover\:text-primary:hover {
+    color: var(--color-primary);
+}
+
 .hover\:text-blue-400:hover {
     color: var(--color-blue-400);
 }
