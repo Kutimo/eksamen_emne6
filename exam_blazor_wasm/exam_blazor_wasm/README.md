@@ -117,9 +117,13 @@ dependencies.
 exam_blazor_wasm.Tests/
 
 ```
-|_ UserServiceTests.cs
-|_ FilterTests.cs
-|_ ResultTest.cs
+|-Unit/
+  |- UserServiceTests.cs
+  |- FilterTests.cs
+  |- ResultTest.cs
+
+|- Integration
+  |- ApiIntegrationTests.cs
 ```
 
 ## Running Tests
@@ -159,6 +163,10 @@ the correct data, We use a result object and update the IsSuccess = false/true,
   result with `IsSuccess = true` and the actual data
 - `Failure_ReturnsIsSuccessFalse` - Verifies failure result and update
   `IsSuccess = false` and an error message.
+
+
+**Integration Tests** 
+- `GetUsersAsync_ReturnsRealUsers_FromApi` - We test the code against the actual api, and verify that we get data back.
 
 <!-- ACKNOWLEDGMENTS -->
 
