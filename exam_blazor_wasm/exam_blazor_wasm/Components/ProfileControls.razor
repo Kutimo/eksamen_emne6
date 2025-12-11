@@ -1,21 +1,19 @@
 <div class="w-full max-w-6xl mx-auto mb-8">
     <div class="flex gap-4 items-center flex-wrap">
-        <div class="flex items-center bg-surface-elevated rounded-lg flex-1 min-w-64 px-4 py-3 border border-gray-700">
             <input type="text"
-                   class="bg-transparent text-primary text-base w-full outline-none placeholder-gray-400"
+                   class="flex items-center bg-white rounded-lg flex-1 max-w-64 px-2 text-xl border border-gray-700 text-font-primary text-xl py-3 h-full w-full outline-none placeholder-gray-400"
                    placeholder="Search by name, country, gender..."
                    @oninput="OnSearchInput"/>
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#9ca3af">
-                <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
-            </svg>
-        </div>
-        <select class="bg-surface-elevated text-primary px-4 py-3 rounded-lg border border-gray-700" @onchange="OnCountChanged">
+        <select class="text-font-primary px-3 py-3 rounded-lg border border-gray-700"
+                @onchange="OnCountChanged">
             <option value="5">5 users</option>
             <option value="10" selected>10 users</option>
             <option value="20">20 users</option>
             <option value="50">50 users</option>
         </select>
-        <button class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors" @onclick="OnRefreshClick">
+        <button
+            class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-gray-800 transition-colors cursor-pointer"
+            @onclick="OnRefreshClick">
             Refresh
         </button>
     </div>
@@ -41,4 +39,5 @@
     {
         await OnRefresh.InvokeAsync();
     }
+
 }

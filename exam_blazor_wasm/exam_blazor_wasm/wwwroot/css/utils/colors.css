@@ -97,6 +97,9 @@ body {
 .hover\:text-white:hover {
     color: var(--color-white);
 }
+.hover\:text-gray-800:hover {
+    color: var(--color-gray-800);
+}
 
 .hover\:text-primary:hover {
     color: var(--color-primary);
