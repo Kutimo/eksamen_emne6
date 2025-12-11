@@ -1,9 +1,11 @@
 using exam_blazor_wasm.Models;
+using exam_blazor_wasm.Services;
 
 namespace exam_blazor_wasm.Tests;
 
 public class FilterTests
 {
+    private readonly IUserFilterService _filterService = new UserFilterService();
     private readonly List<User> _users =
     [
         new User { FullName = "John Doe", Gender = "male", Country = "USA", City = "New York", State = "NY" },
@@ -15,9 +17,9 @@ public class FilterTests
     public void Filter_ByName_ReturnsMatchingUsers()
     {
         var searchText = "John";
-        var filtered = FilterUsers(_users, searchText);
+        var filtered = _filterService.FilterUsers(_users, searchText).ToList();
 
-        Assert.Equal(2, filtered.Count());
+        Assert.Equal(2, filtered.Count);
         Assert.All(filtered, u => Assert.Contains("John", u.FullName));
     }
 
@@ -25,7 +27,7 @@ public class FilterTests
     public void Filter_ByGender_ReturnsMatchingUsers()
     {
         var searchText = "female";
-        var filtered = FilterUsers(_users, searchText);
+        var filtered = _filterService.FilterUsers(_users, searchText).ToList();
 
         Assert.Single(filtered);
         Assert.Equal("Jane Smith", filtered.First().FullName);
@@ -35,7 +37,7 @@ public class FilterTests
     public void Filter_ByCountry_ReturnsMatchingUsers()
     {
         var searchText = "Canada";
-        var filtered = FilterUsers(_users, searchText);
+        var filtered = _filterService.FilterUsers(_users, searchText).ToList();
 
         Assert.Single(filtered);
         Assert.Equal("Jane Smith", filtered.First().FullName);
@@ -45,20 +47,8 @@ public class FilterTests
     public void Filter_EmptySearch_ReturnsAllUsers()
     {
         var searchText = "";
-        var filtered = FilterUsers(_users, searchText);
+        var filtered = _filterService.FilterUsers(_users, searchText).ToList();
 
-        Assert.Equal(3, filtered.Count());
-    }
-
-    private static IEnumerable<User> FilterUsers(List<User> users, string searchText)
-    {
-        return string.IsNullOrWhiteSpace(searchText)
-            ? users
-            : users.Where(u =>
-                u.FullName.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
-                u.Gender.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
-                u.Country.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
-                u.City.Contains(searchText, StringComparison.OrdinalIgnoreCase) ||
-                u.State.Contains(searchText, StringComparison.OrdinalIgnoreCase));
+        Assert.Equal(3, filtered.Count);
     }
 }

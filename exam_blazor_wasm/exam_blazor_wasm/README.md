@@ -61,7 +61,8 @@ This is most of the tech I built the project with.
 
 - Markdig _for parsing markdown to
   html_ [markdig github](https://github.com/xoofx/markdig)
-- Moq _for mocking the HttpClient to test UserService_  [Moq github](https://github.com/devlooped/moq?tab=readme-ov-file#what)
+- Moq _for mocking the HttpClient to test
+  UserService_  [Moq github](https://github.com/devlooped/moq?tab=readme-ov-file#what)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,14 +104,18 @@ to more resources.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <! -- TESTING -->
+
 ## Testing
 
 ### Overview
-I have used xUnit for the testing framework and Moq for mocking HTTP dependencies.
+
+I have used xUnit for the testing framework and Moq for mocking HTTP
+dependencies.
 
 ### Structure
 
 exam_blazor_wasm.Tests/
+
 ```
 |_ UserServiceTests.cs
 |_ FilterTests.cs
@@ -118,27 +123,42 @@ exam_blazor_wasm.Tests/
 ```
 
 ## Running Tests
+
 ```bash
 cd exam_blazor_wasm.tests
 dotnet test
 ```
 
 ### Test Coverage
+
 **UserService Tests**
-* `GetUsersAsync_ReturnsUsers_WhenApiSucceeds`  - Here we test that the api response maps correctly User model.
-* `GetUsersAsync_ReturnsFailure_WhenApiReturnsError` - Here we test the error handling when the api fails.
-* `GetUsersAsync_ReturnsFailure_WhenNoDataReceived` - Here we make sure the handling of an empty response returns an error.
+
+* `GetUsersAsync_ReturnsUsers_WhenApiSucceeds`  - Here we test that the api
+  response maps correctly User model.
+* `GetUsersAsync_ReturnsFailure_WhenApiReturnsError` - Here we test the error
+  handling when the api fails.
+* `GetUsersAsync_ReturnsFailure_WhenNoDataReceived` - Here we make sure the
+  handling of an empty response returns an error.
 
 **Filter Tests**
-- `Filter_ByName_ReturnsMatchingUsers` - Here we check that the filter
-- `Filter_ByGender_ReturnsMatchingUsers` - Verifies gender filter works
-- `Filter_ByCountry_ReturnsMatchingUsers` - Verifies country filter works
-- `Filter_EmptySearch_ReturnsAllUsers` - Verifies empty search returns all
+
+- `Filter_ByName_ReturnsMatchingUsers` - Here we check that the filter works
+  with name.
+- `Filter_ByGender_ReturnsMatchingUsers` - We check that we can filter by
+  gender.
+- `Filter_ByCountry_ReturnsMatchingUsers` - We check that filter by country also
+  works.
+- `Filter_EmptySearch_ReturnsAllUsers` - We check empty search returns all
+  users.
 
 **Result Pattern Tests**
-- `Success_ReturnsIsSuccessTrue` - Verifies success result
-- `Failure_ReturnsIsSuccessFalse` - Verifies failure result
+Instead of throwing exceptions when something goes wrong or when the api returns
+the correct data, We use a result object and update the IsSuccess = false/true,
 
+- `Success_ReturnsIsSuccessTrue` - we check that the api works, and we get a
+  result with `IsSuccess = true` and the actual data
+- `Failure_ReturnsIsSuccessFalse` - Verifies failure result and update
+  `IsSuccess = false` and an error message.
 
 <!-- ACKNOWLEDGMENTS -->
 

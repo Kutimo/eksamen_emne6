@@ -7,6 +7,7 @@ namespace exam_blazor_wasm.Pages;
 public partial class Profiles
 {
     [Inject] private IUserService UserService { get; set; } = default!;
+    [Inject] private IUserFilterService UserFilterService { get; set; } = default!;
 
     private List<User> _users = [];
     private bool _isLoading = true;
@@ -16,14 +17,7 @@ public partial class Profiles
     private User? _selectedUser;
     private bool _isModalOpen;
 
-    private IEnumerable<User> FilteredUsers => string.IsNullOrWhiteSpace(_searchText)
-        ? _users
-        : _users.Where(u =>
-            u.FullName.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.Gender.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.Country.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.City.Contains(_searchText, StringComparison.OrdinalIgnoreCase) ||
-            u.State.Contains(_searchText, StringComparison.OrdinalIgnoreCase));
+    private IEnumerable<User> FilteredUsers => UserFilterService.FilterUsers(_users, _searchText);
 
     protected override async Task OnInitializedAsync()
     {

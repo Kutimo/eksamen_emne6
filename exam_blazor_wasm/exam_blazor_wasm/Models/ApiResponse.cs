@@ -2,7 +2,7 @@ namespace exam_blazor_wasm.Models;
 
 public class ApiResponse
 {
-    public List<ApiUser> Results { get; set; } = [];
+    public List<ApiUser>? Results { get; set; } = [];
 }
 
 public class ApiUser
