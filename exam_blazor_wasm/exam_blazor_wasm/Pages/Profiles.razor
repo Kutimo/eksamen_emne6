@@ -3,7 +3,7 @@
 
 <PageTitle>Profiles</PageTitle>
 
-<div class="max-w-6xl mx-auto px-4 py-8">
+<div class="max-w-6xl mx-auto min-w-4/5 px-4 py-8">
     <div class="mb-8">
         <h1 class="text-4xl font-bold text-primary mb-2">Random Profiles</h1>
         <p class="text-secondary my-4">Discover people from around the world</p>
@@ -21,7 +21,8 @@
         </div>
     }
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    @* <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"> *@
+    <div class="grid grid-cols-auto-fit gap-4">
         @if (_isLoading)
         {
             @for (int i = 0; i < _count; i++)

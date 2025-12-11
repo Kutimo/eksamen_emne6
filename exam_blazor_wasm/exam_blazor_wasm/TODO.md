@@ -52,10 +52,13 @@ Make a search bar
 Annet: 
 - [x] favicon
 - [ ] fix ugly errors
-- [ ] make CSS lib with reusable code
-- [ ] remove duplcate css in app.css and razor.css files and change to css class lib.
+- [x] make CSS lib with reusable code
+- [x] remove duplcate css in app.css and razor.css files and change to css class lib.
 - [ ] accesibility checks
 - [ ] remove unused props in model for api call
+- [ ] change button to just x in modal
+- [] fix errors in markdown.css
+- 
 Testing:
 - [ ] unit test 
 - [ ] integrasjonstest

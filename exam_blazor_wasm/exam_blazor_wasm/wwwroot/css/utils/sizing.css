@@ -150,9 +150,10 @@
     min-width: 24rem;
 }
 
-.min-h-screen {
-    min-height: 100vh;
+.min-w-4\/5 {
+    width: 80%;
 }
+
 
 .w-\[35ch\] {
     width: 35ch;
@@ -164,4 +165,8 @@
 
 .min-h-\[90vh\] {
     min-height: 90vh;
+}
+
+.min-h-screen {
+    min-height: 100vh;
 }
