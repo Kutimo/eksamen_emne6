@@ -1,7 +1,10 @@
+<a id="readme-top"></a>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<img src="wwwroot/Assets/svg/logo.svg" width="80" height="80" >
+<a>
+  <img src="wwwroot/Assets/svg/logo.svg" width="80" height="80" >
+</a>
 </div>
 <h3 align="center">RandomStrangerStack</h3>
 
@@ -54,17 +57,22 @@ This is most of the tech I built the project with.
 * [![HTML][HTML]][HTML-url]
 * [![CSS][CSS]][CSS-url]
 
+### Nuget packages:
+
+- Markdig _for parsing markdown to
+  html_ [markdig github](https://github.com/xoofx/markdig)
+- Moq _for mocking the HttpClient to test UserService_  [Moq github](https://github.com/devlooped/moq?tab=readme-ov-file#what)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project
-locally.
-To get a local copy up and running follow these simple example steps.
+This is how to get up and running with the project.
 
 ### Prerequisites
+
 In order to build project, you need to install .NET 10.0
 
 * Install nuget packages
@@ -94,25 +102,64 @@ to more resources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<! -- TESTING -->
+## Testing
+
+### Overview
+I have used xUnit for the testing framework and Moq for mocking HTTP dependencies.
+
+### Structure
+
+exam_blazor_wasm.Tests/
+```
+|_ UserServiceTests.cs
+|_ FilterTests.cs
+|_ ResultTest.cs
+```
+
+## Running Tests
+```bash
+cd exam_blazor_wasm.tests
+dotnet test
+```
+
+### Test Coverage
+**UserService Tests**
+* `GetUsersAsync_ReturnsUsers_WhenApiSucceeds`  - Here we test that the api response maps correctly User model.
+* `GetUsersAsync_ReturnsFailure_WhenApiReturnsError` - Here we test the error handling when the api fails.
+* `GetUsersAsync_ReturnsFailure_WhenNoDataReceived` - Here we make sure the handling of an empty response returns an error.
+
+**Filter Tests**
+- `Filter_ByName_ReturnsMatchingUsers` - Here we check that the filter
+- `Filter_ByGender_ReturnsMatchingUsers` - Verifies gender filter works
+- `Filter_ByCountry_ReturnsMatchingUsers` - Verifies country filter works
+- `Filter_EmptySearch_ReturnsAllUsers` - Verifies empty search returns all
+
+**Result Pattern Tests**
+- `Success_ReturnsIsSuccessTrue` - Verifies success result
+- `Failure_ReturnsIsSuccessFalse` - Verifies failure result
+
 
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
 
-Theese are the pages I have gotten insporation and fonts, icons, illustrations
+These are the pages I have gotten inspiration and fonts, icons, illustrations
 etc.
 
-* [syntax.fm (Typography page)](https://syntax.fm/system/typography)
-* [tailwind(CSS classes inspiration)](https://tailwindcss.com/docs/installation/using-vite)
-* [undraw(Landing page illustration)](https:https://undraw.co/illustrations/3)
+* [Syntax.fm (Typography page)](https://syntax.fm/system/typography)
+* [Tailwind(CSS classes inspiration)](https://tailwindcss.com/docs/installation/using-vite)
+* [Undraw(Landing page illustration)](https:https://undraw.co/illustrations/3)
 * [Realfavicongenerator(Favicon icons)](https://realfavicongenerator.net/your-favicon-is-ready)
 * [Google fonts(Icons and fonts)](https://fonts.google.com/icons)
 * [Img Shields](https://shields.io)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
+## Ai use
+
+Can be found in the AIUSE.md file.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -125,7 +172,7 @@ etc.
 
 [CSS-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 
-[C#]:https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white
+[C#]:https://img.shields.io/badge/c%23%20-%23239120.svg?&style=for-the-badge&logo=c-sharp&logoColor=white
 
 [C#-url]: https://learn.microsoft.com/en-us/dotnet/csharp/
 
@@ -137,14 +184,6 @@ etc.
 
 [Blazor-url]: https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
 
-### Tech
 
-- Markdig _for parsing markdown to
-  html_ [markdig github](https://github.com/xoofx/markdig)
--
 
-### Sources
 
-### Ai use:
-
-Can be found in the AIUSE.md file.
