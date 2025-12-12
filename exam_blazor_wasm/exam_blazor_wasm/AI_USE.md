@@ -81,3 +81,6 @@ response:
 **Frist:** 12. desember 2025
 
 ```
+
+
+https://claude.ai/share/65443a9e-10a2-428a-9817-2d3d9fed8706

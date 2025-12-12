@@ -16,34 +16,36 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#nuget-packages">NuGet Packages</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#tests">Tests</a></li>
+        <li><a href="#running-the-project">Running the Project</a></li>
       </ul>
     </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#architecture-sections">Architecture</a></li>
+    <li><a href="#design-decisions">Design Decisions</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#ai-use">AI Use</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About the project
 
 ![site_screenshot.png](wwwroot/Assets/site_screenshot.png)
 
-There are many great README templates available on GitHub; however, I didn't
-find one that really suited my needs so I created this enhanced one. I want to
-create a README template so amazing that it'll be the last one you ever need --
-I think this is it.
-
-Of course, no one template will serve all projects since your needs may be
-different. So I'll be adding more in the near future. You may also suggest
-changes by forking this repo and creating a pull request or opening an issue.
-Thanks to all the people have contributed to expanding this template!
+Random Stranger Stack:
+A blazor web assembly app, containing a simple landing page, profile page with a
+search bar, drop down and refresh button. All used for displaying user cards
+from the https://randomuser.me/ API. Using a CSS lib inspired by tailwind.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -57,10 +59,10 @@ This is most of the tech I built the project with.
 * [![HTML][HTML]][HTML-url]
 * [![CSS][CSS]][CSS-url]
 
-### Nuget packages:
+### NuGet packages:
 
 - Markdig _for parsing markdown to
-  html_ [markdig github](https://github.com/xoofx/markdig)
+  html_ [Markdig github](https://github.com/xoofx/markdig)
 - Moq _for mocking the HttpClient to test
   UserService_  [Moq github](https://github.com/devlooped/moq?tab=readme-ov-file#what)
 
@@ -97,13 +99,95 @@ dotnet watch
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional
-screenshots, code examples and demos work well in this space. You may also link
-to more resources.
+<div align="center">
+  <img src="wwwroot/Assets/usage.gif"  alt="usage gif"/>
+</div>
+
+Search for users, filter by name/country/gender, when a card is clicked a modal
+opens.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<! -- TESTING -->
+## Features
+
+**Random User Profiles**:  
+Here we have the option of fetching 10,25,50 or 100
+random users from the random user API.  
+
+**Search and filter:**  
+Search by name, gender or country.
+
+**Profile Details**:  
+When a user card is clicked a modal is opened, and we display
+the full information of the selected profile.  
+
+**Skeleton Loading**:  placeholder loading cards with animation for user cards.   
+
+**Error handling**:  
+User friendly error message and a retry option using the
+Result pattern  
+
+**Responsive Design**:  
+Works from 360px to desktop.  
+
+**Custom CSS utils**:  
+I decided to create utility classes inspired by tailwind,
+after struggling with tailwind hot module reload in a previous school task.  
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Architecture sections
+
+The app follows a clean, layered architecture pattern:
+
+**Services Layer** - Business logic separated into dedicated services:
+
+- `IUserService` - Handles API communication and data fetching
+- `IUserFilterService` - Manages user filtering logic so it can be used in
+  testing too.
+
+**Components** - Reusable UI components with single responsibilities:
+
+- `UserCard` - Displays user information
+- `UserDetailsModal` - Shows detailed user information in a modal
+- `ProfileControls` - Search, filter, and refresh components
+
+**Models** - Strongly typed data structures:
+
+- `User` - Domain model for user data
+- `Result<T>` - Result pattern for handling success/failure state
+- `ApiResponse` & related DTOs - mapping the API response
+
+**Dependency Injection** - All services registered in `Program.cs` and injected
+where needed and for testability.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Design decisions
+
+**Result Pattern** - Instead of throwing exceptions, I use a `Result<T>` type to
+handle success/failure states. This makes error handling explicit and easier to
+test.
+
+**Custom CSS Utilities** - Built a Tailwind-inspired utility class library
+instead of using Tailwind directly.
+
+**Service Extraction** - Filter logic extracted into `UserFilterService` rather
+than keeping it in the component. This makes the logic reusable and testable.
+
+**Immutable DTOs** - API response models use `init` setters instead of `set`,
+making them immutable after deserialization and preventing accidental mutations.
+
+**Component Composition** - UI broken into small, focused components
+(UserCard, Modal, Controls) that can be composed together and tested
+independently.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- TESTING -->
 
 ## Testing
 
@@ -137,10 +221,10 @@ dotnet test
 
 **UserService Tests**
 
-* `GetUsersAsync_ReturnsUsers_WhenApiSucceeds`  - Here we test that the api
+* `GetUsersAsync_ReturnsUsers_WhenApiSucceeds`  - Here we test that the API
   response maps correctly User model.
 * `GetUsersAsync_ReturnsFailure_WhenApiReturnsError` - Here we test the error
-  handling when the api fails.
+  handling when the API fails.
 * `GetUsersAsync_ReturnsFailure_WhenNoDataReceived` - Here we make sure the
   handling of an empty response returns an error.
 
@@ -156,17 +240,18 @@ dotnet test
   users.
 
 **Result Pattern Tests**
-Instead of throwing exceptions when something goes wrong or when the api returns
+Instead of throwing exceptions when something goes wrong or when the API returns
 the correct data, We use a result object and update the IsSuccess = false/true,
 
-- `Success_ReturnsIsSuccessTrue` - we check that the api works, and we get a
+- `Success_ReturnsIsSuccessTrue` - we check that the API works, and we get a
   result with `IsSuccess = true` and the actual data
 - `Failure_ReturnsIsSuccessFalse` - Verifies failure result and update
   `IsSuccess = false` and an error message.
 
+**Integration Tests**
 
-**Integration Tests** 
-- `GetUsersAsync_ReturnsRealUsers_FromApi` - We test the code against the actual api, and verify that we get data back.
+- `GetUsersAsync_ReturnsRealUsers_FromApi` - We test the code against the actual
+  API, and verify that we get data back.
 
 <!-- ACKNOWLEDGMENTS -->
 
@@ -183,7 +268,7 @@ etc.
 * [Img Shields](https://shields.io)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
-## Ai use
+## AI Use
 
 Can be found in the AIUSE.md file.
 
