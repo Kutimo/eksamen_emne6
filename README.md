@@ -3,7 +3,7 @@
 <br />
 <div align="center">
 <a>
-  <img src="wwwroot/Assets/svg/logo.svg" width="80" height="80" >
+  <img src="exam_blazor_wasm/exam_blazor_wasm/wwwroot/Assets/svg/logo.svg" width="80" height="80" alt="Project logo" >
 </a>
 </div>
 <h3 align="center">RandomStrangerStack</h3>
@@ -40,7 +40,7 @@
 
 ## About the project
 
-![site_screenshot.png](wwwroot/Assets/site_screenshot.png)
+![site_screenshot.png](exam_blazor_wasm/exam_blazor_wasm/wwwroot/Assets/site_screenshot.png)
 
 Random Stranger Stack:
 A blazor web assembly app, containing a simple landing page, profile page with a
@@ -100,7 +100,7 @@ dotnet watch
 ## Usage
 
 <div align="center">
-  <img src="wwwroot/Assets/usage.gif"  alt="usage gif"/>
+  <img src="exam_blazor_wasm/exam_blazor_wasm/wwwroot/Assets/usage.gif"  alt="usage gif"/>
 </div>
 
 Search for users, filter by name/country/gender, when a card is clicked a modal
